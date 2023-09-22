@@ -14,3 +14,10 @@ subset = df[listing]
 subset2 = df [['country', 'continent','year','gdpPercap']]
 print(subset)
 print(subset2)
+#Subset rows and columns
+#using loc
+print(df.loc[43,'country']
+#using iloc
+print(df.iloc[42,0])
+#usingmultiple rows and columns notation
+print(df.iloc[[0, 99, 999], [0, 3, 5]])
