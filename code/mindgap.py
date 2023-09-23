@@ -42,5 +42,14 @@ mean_group_by_country_year_lifeEXP = group_by_country_year_df['lifeExp'].mean()
 print(mean_group_by_country_year_lifeEXP)
 
 # multiple features and data
-mean_group_by_place_time_dataGDP_LifeEXP = df.groupby(['country','year'])[['lifeExp','gdpPercap']].mean()
+# mean_group_by_place_time_dataGDP_LifeEXP = df.groupby(['country','year'])[['lifeExp','gdpPercap']].mean()
+#method chaining
+mean_group_by_place_time_dataGDP_LifeEXP =(
+										   df.groupby(['country','year'])
+										   [['lifeExp','gdpPercap']].
+										   mean()
+										   )
 print(mean_group_by_place_time_dataGDP_LifeEXP)
+#flaten data
+flat = mean_group_by_place_time_dataGDP_LifeEXP.reset_index()
+print(flat)
